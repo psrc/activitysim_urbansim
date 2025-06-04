@@ -1,0 +1,28 @@
+input_table_list:
+  - tablename: households
+    filename: households_sample.csv
+    index_col: household_id
+    
+  - tablename: persons
+    filename: persons_sample.csv
+    index_col: person_id
+
+models:
+  - empty_model
+  - count_households
+  - compute_variables_for_households
+  - write_data_dictionary
+  - write_tables
+
+    
+household_variables:
+  SPEC: household_vars
+  DF: households 
+  TABLES:
+    - persons
+  
+output_tables:
+  h5_store: False
+  action: include
+  tables:
+    - households

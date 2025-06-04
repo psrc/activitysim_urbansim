@@ -1,0 +1,4 @@
+Description,Target,Expression
+,_PERSON_COUNT,"lambda query, persons, households: persons.query(query).groupby('household_id').size().reindex(households.index).fillna(0).astype(np.int8)"
+num_children,num_children,"_PERSON_COUNT('age < 18', persons, households)"
+persons_under_13,persons_under_13,"_PERSON_COUNT('age < 13', persons, households)"
