@@ -8,9 +8,12 @@ input_table_list:
     index_col: person_id
 
 models:
+# the framework does not allow to run the same model twice
   - empty_model
-  - count_households
+#  - count_households
   - compute_variables_for_households
+  - add_new_households  # adds 10 households to the original 5000
+  - count_households    # should print 5010
   - write_data_dictionary
   - write_tables
 
