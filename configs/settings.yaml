@@ -26,3 +26,6 @@ output_tables:
   action: include
   tables:
     - households
+    
+households_sample_size:  0
+load_skims: False
