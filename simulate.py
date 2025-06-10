@@ -8,6 +8,10 @@
 # conda activate asim
 # pip install numba==0.58.1
 
+# For activitysim itself, clone the repo
+# https://github.com/psrc/activitysim
+# and checkout the branch urbansim
+
 import argparse
 import sys
 from activitysim import abm
