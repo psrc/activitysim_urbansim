@@ -15,7 +15,6 @@ models:
   - add_new_households  # adds 10 households to the original 5000
   - remove_households   # removes two households
   - count_households    # should print 5008
-  - add_column_to_households # should add a column 'year' to households, set to injectible 
   - write_data_dictionary
   - write_tables
 

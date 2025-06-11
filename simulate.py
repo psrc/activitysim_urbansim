@@ -15,7 +15,7 @@
 import argparse
 import sys
 from activitysim import abm
-from activitysim.cli.run import add_run_args, run
+from urbansim.run import add_run_args, run
 import urbansim.models
 
 if __name__ == "__main__":
