@@ -13,7 +13,8 @@ models:
 #  - count_households
   - compute_variables_for_households
   - add_new_households  # adds 10 households to the original 5000
-  - count_households    # should print 5010
+  - remove_households   # removes two households
+  - count_households    # should print 5008
   - write_data_dictionary
   - write_tables
 

@@ -35,6 +35,15 @@ def add_new_households(state: workflow.State,
     # change the index, i.e. household_id
     sample.index = np.arange(households.index.max() + 1, households.index.max() + n + 1)
     # concatenate
-    households = pd.concat([households, sample])
+    state.extend_table("households", sample)
+    return None
+
+@workflow.step()
+def remove_households(state: workflow.State,
+                      households: pd.DataFrame) -> None:
+    n = 2
+    sample = households.sample(n)
+    households = households.drop(sample.index)
+    state.add_table("households", households)
     return None
 
