@@ -47,3 +47,10 @@ def remove_households(state: workflow.State,
     state.add_table("households", households)
     return None
 
+@workflow.step()
+def add_column_to_households(state: workflow.State,
+                      households: pd.DataFrame) -> None:
+    # Add a new column to the households table
+    households["year"] = state.get_injectable("year")
+    state.add_table("households", households)
+    return None
