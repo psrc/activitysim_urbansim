@@ -16,7 +16,8 @@ models:
   - remove_households   # removes two households
   - count_households    # should print 5008
   - write_data_dictionary
-  - write_tables
+  - write_tables_for_sim_year
+#  - write_tables
 
     
 household_variables:
